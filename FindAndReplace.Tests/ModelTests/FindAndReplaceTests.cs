@@ -40,7 +40,17 @@ namespace FindAndReplace.Tests
       string findWord = "sir";
       string replacedWith = "maam";
       string result = FindAndReplaceWord.WordReplacer(userInput, findWord, replacedWith);
-      Assert.AreEqual("Hello maam", result);
+      Assert.AreEqual("Hello maam how are youmaam", result);
+    }
+
+    [TestMethod]
+    public void WordReplacer_FindAllWordOccurencesAndReplaceWith2_String()
+    {
+      string userInput = "Hesirllo sir how are yousir";
+      string findWord = "sir";
+      string replacedWith = "maam";
+      string result = FindAndReplaceWord.WordReplacer(userInput, findWord, replacedWith);
+      Assert.AreEqual("Hemaamllo maam how are youmaam", result);
     }
   }
 }
