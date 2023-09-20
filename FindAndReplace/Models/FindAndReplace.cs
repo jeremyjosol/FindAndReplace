@@ -10,9 +10,25 @@ namespace FindAndReplace.Models
       return string.Join(" ", sentenceArray);
     }
 
-    public static string WordReplacer(string userInput, string findWord, string replacedWith)
+    public static string WordReplacer(string userInput, string findWord)
     {
+      string isTrue = " ";
       string[] sentenceArray = userInput.Split(" ");
+      for (int i = 0; i < sentenceArray.Length; i++)
+      {
+        if (sentenceArray[i] == findWord)
+        {
+          isTrue = "true";
+        
+        } 
+        else 
+        {
+          isTrue = "false";
+        }
+      }
+      return isTrue;
     }
   }
 }
+
+

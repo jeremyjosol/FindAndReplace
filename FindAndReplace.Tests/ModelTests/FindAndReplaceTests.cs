@@ -19,9 +19,8 @@ namespace FindAndReplace.Tests
     {
       string userInput = "Hello sir";
       string findWord = "sir";
-      string replacedWith = "maam";
-      string result = FindAndReplaceWord.WordReplacer(userInput, findWord, replacedWith);
-      Assert.AreEqual("Hello maam", result);
+      string result = FindAndReplaceWord.WordReplacer(userInput, findWord);
+      Assert.AreEqual("true", result);
     }
   }
 }
