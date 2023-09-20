@@ -1,13 +1,18 @@
 using System;
-using FindAndReplace.Models;
 
-namespace FindAndReplace
+namespace FindAndReplace.Models
 {
-  class Program
+  public class FindAndReplaceWord
   {
-    static void Main()
+    public static string WordReplacer(string userInput)
     {
+      string[] sentenceArray = userInput.Split(" ");
+      return string.Join(" ", sentenceArray);
+    }
 
+    public static string WordReplacer(string userInput, string findWord, string replacedWith)
+    {
+      string[] sentenceArray = userInput.Split(" ");
     }
   }
 }
