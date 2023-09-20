@@ -19,7 +19,6 @@ namespace FindAndReplace.Models
         if (sentenceArray[i] == findWord)
         {
           isTrue = "true";
-        
         } 
         else 
         {
@@ -27,6 +26,19 @@ namespace FindAndReplace.Models
         }
       }
       return isTrue;
+    }
+
+    public static string WordReplacer(string userInput, string findWord, string replacedWith)
+    {
+      string[] sentenceArray = userInput.Split(" ");
+      for (int i = 0; i < sentenceArray.Length; i++)
+      {
+        if (sentenceArray[i].Contains(findWord))
+        {
+          sentenceArray[i] = sentenceArray[i].Replace(findWord, replacedWith);
+        }
+      }
+      return string.Join(" ", sentenceArray);
     }
   }
 }
