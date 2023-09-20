@@ -15,12 +15,12 @@ namespace FindAndReplace.Tests
       Assert.AreEqual("Hello sir", result);
     }
     [TestMethod]
-    public void WordReplacer_FindCorrectWord_String()
+    public void WordReplacer_FindCorrectWord_Bool()
     {
       string userInput = "Hello sir";
       string findWord = "sir";
-      string result = FindAndReplaceWord.WordReplacer(userInput, findWord);
-      Assert.AreEqual("true", result);
+      bool result = FindAndReplaceWord.WordReplacer(userInput, findWord);
+      Assert.IsTrue(result);
     }
 
     [TestMethod]
